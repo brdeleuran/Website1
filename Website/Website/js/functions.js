@@ -9,4 +9,15 @@
         document.getElementById("myBar").style.width = scrolled + "%";
     }
 
+    $(".open").click(function (e) {
+        $(this).parents(".menuItems").find(".info").slideToggle();
+        if ($(this).find(".faqPlus").hasClass('rotate')) {
+            $(this).find('.faqPlus').removeClass('rotate');
+            $(this).find('.faqPlus').addClass('rotate1');
+        } else {
+            $(this).find('.faqPlus').addClass('rotate');
+            $(this).find('.faqPlus').removeClass('rotate1');
+        }
+    });
+
 });

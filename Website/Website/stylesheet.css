@@ -42,17 +42,230 @@
     height: 250px
 }
 
-.menuItems ol {
+.logoHome {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 700px;
+    height: 700px
+}
+
+.menuItems {
     background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3));
     display: block;
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    left: 20%;
+    text-align: left;
+    color: antiquewhite;
+    font-size: 20px;
 }
 
-    .menuItems ol li {
-        width: 60%;
-        display: inline-block;
-        margin-top: 20px;
-        color: antiquewhite;
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.5;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.open {
+    text-align: left;
+    padding: 25px;
+    margin: 0px;
+    border: 1px 0px solid black;
+    width: 60%;
+    color: antiquewhite;
+}
+
+.info {
+    padding: 0px 25px 25px 25px;
+    display: none;
+    text-align: left;
+    color: antiquewhite;
+    width: 60%;
+    margin: 0px;
+}
+
+hr.hr1 {
+    width: 60%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0.5px solid grey;
+}
+
+.price {
+    left: 90%;
+}
+
+.contact {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 20px;
+}
+
+.faqPlus {
+    position: absolute;
+    left: 60%;
+    margin: 0px;
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
     }
+
+    to {
+        -ms-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+.rotate {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 300ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 300ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@-ms-keyframes spin1 {
+    from {
+        -ms-transform: rotate(45deg);
+    }
+
+    to {
+        -ms-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes spin1 {
+    from {
+        -moz-transform: rotate(45deg);
+    }
+
+    to {
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes spin1 {
+    from {
+        -webkit-transform: rotate(45deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes spin1 {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rotate1 {
+    -webkit-animation-name: spin1;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin1;
+    -moz-animation-duration: 300ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin1;
+    -ms-animation-duration: 300ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+    animation-name: spin1;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.faqPlus1 {
+    margin: 0px;
+    position: absolute;
+    left: 60%;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
