@@ -4,7 +4,7 @@ namespace Website.Models
 {
     public class LogicHelper
     {
-        static string sqlConnectionString = ConfigurationManager.ConnectionStrings["PizzaDB"].ConnectionString;
+        static readonly string sqlConnectionString = ConfigurationManager.ConnectionStrings["PizzaDB"].ConnectionString;
 
         public static void CreateItem(string tableName, string itemName, int price)
         {
