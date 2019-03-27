@@ -12,11 +12,11 @@
 <body>
     <form id="form1" runat="server">
         <div class="progress-container">
-         <div class="progress-bar" id="myBar">
-         </div>
+            <div class="progress-bar" id="myBar">
+            </div>
         </div>
         <div class="backImg">
-         </div>
+        </div>
         <div>
             <img class="logo" src="assets/logoDuomo.png" />
         </div>
@@ -24,15 +24,20 @@
             <a href="Home.aspx">Forside</a>
             <a href="Menu.aspx">Menu</a>
             <a href="Contact.aspx">Kontakt</a>
-            <input type="text" placeholder="Search for topping" id="searchBar" />
+            <input type="text" placeholder="Search for topping" id="searchBar" name="topping"/>
             <button type="submit" class="searchButton">Search</button>
         </div>
         <div class="menuItems">
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
+                    <asp:BoundField DataField="Price" HeaderText="Pris"/>
+                </Columns>
+            </asp:GridView>
         </div>
-            <div>
-                <p>Hello There!</p>
-            </div>
+        <div>
+            <p>Hello There!</p>
+        </div>
     </form>
 </body>
 </html>

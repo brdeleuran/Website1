@@ -89,5 +89,20 @@ namespace Website.Models
                 return database.Query("*", itemTable, "");
             }
         }
+
+        public static string[] GetItemNames(string item)
+        {
+            using (DatabaseHelper database = new DatabaseHelper(sqlConnectionString))
+            {
+                return database.Query1D("Name", item, "");
+            }
+        }
+        public static string[][] GetItemsWithoutId(string itemTable)
+        {
+            using (DatabaseHelper database = new DatabaseHelper(sqlConnectionString))
+            {
+                return database.Query("Name, Price", itemTable, "");
+            }
+        }
     }
 }
