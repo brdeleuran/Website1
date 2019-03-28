@@ -18,14 +18,14 @@
         <div class="backImg">
         </div>
         <div>
-            <img class="logo" src="assets/logoDuomo.png" />
+            <img class="logo" src="assets/logoDuomo.png" alt="duomo pizzaria logo"/>
         </div>
         <div class="sidenav">
             <a href="Home.aspx">Forside</a>
             <a href="Menu.aspx">Menu</a>
             <a href="Contact.aspx">Kontakt</a>
-            <input type="text" placeholder="Search for topping" id="searchBar" name="topping"/>
-            <button type="submit" class="searchButton">Search</button>
+            <input type="text" placeholder="Search for topping" id="searchBar" name="topping" runat="server"/>
+            <button type="submit" class="searchButton" runat="server">Search</button>
         </div>
         <div class="menuItems">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">

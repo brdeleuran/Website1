@@ -34,6 +34,16 @@ namespace Website
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string textBox = searchBar.Value;
+            using (DataTable dt = new DataTable())
+            {
+                dt.Columns.Add("Id");
+                dt.Columns.Add("Name");
+                dt.Columns.Add("Price");
+                dt.Rows.Add("", textBox, "");
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
         }
     }
 }
