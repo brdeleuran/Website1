@@ -94,7 +94,7 @@ namespace Website.Models
         {
             using (DatabaseHelper database = new DatabaseHelper(sqlConnectionString))
             {
-                return database.Query1D("Name", item, "");
+                return database.Query1D("Name", item, "ORDER BY ID");
             }
         }
         public static string[][] GetItemsWithoutId(string itemTable)

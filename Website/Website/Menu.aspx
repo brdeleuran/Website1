@@ -25,7 +25,8 @@
             <a href="Menu.aspx">Menu</a>
             <a href="Contact.aspx">Kontakt</a>
             <input type="text" placeholder="Search for topping" id="searchBar" name="topping" runat="server"/>
-            <button type="submit" class="searchButton" runat="server">Search</button>
+            
+            <asp:Button runat="server" Text="Search" OnClick="GetPizzas"/>
         </div>
         <div class="menuItems">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
