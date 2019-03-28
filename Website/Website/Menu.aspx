@@ -30,6 +30,7 @@
         <div class="menuItems">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
+                    <asp:BoundField DataField="Id" HeaderText="Nummer"/>
                     <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
                     <asp:BoundField DataField="Price" HeaderText="Pris"/>
                 </Columns>
