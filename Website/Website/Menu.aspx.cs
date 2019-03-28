@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Services;
+using System.Xml;
 using Website.Models;
 
 namespace Website
@@ -26,7 +27,7 @@ namespace Website
                 for (int i = 0; i < pizzaNames.Length; i++)
                 {
                     dt.Rows.Add(pizzas[i][0],pizzas[i][1], pizzas[i][2] + " kr,-");
-                    dt.Rows.Add("",string.Join(", ", LogicHelper.GetPizza(pizzaNames[i])), "");
+                    dt.Rows.Add(string.Join(", ", LogicHelper.GetPizza(pizzaNames[i])));
                 }
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
@@ -42,7 +43,8 @@ namespace Website
                 string[] toppingsOnPizza = LogicHelper.GetPizza(pizza);
                 for (int i = 0; i < toppings.Length && pizzas.Contains(pizza); i++)
                 {
-                    if (!toppingsOnPizza.Contains(toppings[i])) pizzas.Remove(pizza);
+                    if (!toppingsOnPizza.Contains(toppings[i]))
+                        pizzas.Remove(pizza);
                 }
             }
             string[][] pizzaItems = new string[pizzas.Count][];
@@ -55,19 +57,26 @@ namespace Website
                 dt.Columns.Add("Id");
                 dt.Columns.Add("Name");
                 dt.Columns.Add("Price");
-
+                GridView1.DataSource = dt;
                 foreach (var pizza in pizzaItems)
                 {
                     dt.Rows.Add(pizza[0],pizza[1], pizza[2] + " kr,-");
-                    dt.Rows.Add("",string.Join(", ", LogicHelper.GetPizza(pizza[1])), "");
+                    dt.Rows.Add(string.Join(", ", LogicHelper.GetPizza(pizza[1])));
                 }
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
             }
         }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        
+        protected void grid_RowCreated(object sender, GridViewRowEventArgs e)
         {
+            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex % 2 == 1)
+            {
+                e.Row.Cells[0].ColumnSpan = 3;
+                //now make up for the colspan from cell2
+                e.Row.Cells.RemoveAt(2);
+                e.Row.Cells.RemoveAt(1);
+            }
         }
     }
 }
