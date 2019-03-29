@@ -103,5 +103,6 @@ namespace Website.Models
                 return database.Query("Name, Price", itemTable, "");
             }
         }
+
     }
 }

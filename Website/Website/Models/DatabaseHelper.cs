@@ -97,7 +97,10 @@ namespace Website.Models
                     List<string> output = new List<string>();
                     while (reader.Read())
                     {
-                        output.Add(reader[0].ToString());
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            output.Add(reader[i].ToString());
+                        }
                     }
                     return output.ToArray();
                 }

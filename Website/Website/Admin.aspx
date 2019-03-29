@@ -28,15 +28,15 @@
         <br /><br /><br />
         <div class="adminNav">
             <div>
-                <input type="text" placeholder="ID" id="idSearch" name="topping" runat="server" />
+                <input type="text" placeholder="ID" id="idSearch" name="id" runat="server" />
                 <asp:Button runat="server" Text="Create new item" OnClick="CreateItem"/>
            </div>
             <div>
-                <input type="text" placeholder="Navn" id="nameSearch" name="topping" runat="server" />
+                <input type="text" placeholder="Navn" id="nameSearch" name="name" runat="server" />
                 <asp:Button runat="server" Text="Update item" OnClick="UpdateItem"/>
             </div>
             <div>
-                <input type="text" placeholder="Pris" id="priceSearch" name="topping" runat="server" />
+                <input type="text" placeholder="Pris" id="priceSearch" name="price" runat="server" />
                 <asp:Button runat="server" Text="Read data" OnClick="ReadItem"/>
             </div>
             <div>
@@ -45,12 +45,20 @@
             <div>
                 <div class="menuItems">
                     <asp:GridView ID="gridViewPizza" runat="server" AutoGenerateColumns="False">
-
+                        <Columns>
+                            <asp:BoundField DataField="Id" HeaderText="Nummer"/>
+                            <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
+                            <asp:BoundField DataField="Price" HeaderText="Pris" ItemStyle-Font-Bold="true"/>
+                        </Columns>
                     </asp:GridView>
                 </div>
                 <div class="menuItems">
                     <asp:GridView ID="gridViewTopping" runat="server" AutoGenerateColumns="False">
-
+                        <Columns>
+                            <asp:BoundField DataField="Id" HeaderText="Nummer"/>
+                            <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
+                            <asp:BoundField DataField="Price" HeaderText="Pris" ItemStyle-Font-Bold="true"/>
+                        </Columns>
                     </asp:GridView>
                 </div>
             </div>

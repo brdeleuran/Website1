@@ -17,54 +17,43 @@ namespace Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string[] pizzaNames = LogicHelper.GetItemNames("Pizza");
-            using (DataTable dt = new DataTable())
-            {
-                dt.Columns.Add("Id");
-                dt.Columns.Add("Name");
-                dt.Columns.Add("Price");
-                string[][] pizzas = LogicHelper.GetItems("Pizza");
-                for (int i = 0; i < pizzaNames.Length; i++)
-                {
-                    dt.Rows.Add(pizzas[i][0],pizzas[i][1], pizzas[i][2] + " kr,-");
-                    dt.Rows.Add(string.Join(", ", LogicHelper.GetPizza(pizzaNames[i])));
-                }
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-            }
+            GridView1.DataSource = GetPizzas(searchBar.Value);
+            GridView1.DataBind();
         }
         public void GetPizzas(object sender, EventArgs e)
         {
-            string[] toppings = searchBar.Value.Split(',');
-            List<string> pizzas = LogicHelper.GetItemNames("Pizza").ToList();
-            string[] pizzaTemp = pizzas.ToArray();
+            GridView1.DataSource = GetPizzas(searchBar.Value);
+            GridView1.DataBind();
+        }
+        public static DataTable GetPizzas(string topping)
+        {
+            string[] toppings = topping.Split(',');
+            if (string.IsNullOrEmpty(topping)) toppings = new string[0];
+            string[] pizzaTemp = LogicHelper.GetItemNames("Pizza");
+            List<string[]> pizzas = new List<string[]>();
             foreach (string pizza in pizzaTemp)
             {
                 string[] toppingsOnPizza = LogicHelper.GetPizza(pizza);
-                for (int i = 0; i < toppings.Length && pizzas.Contains(pizza); i++)
+                bool contains = true;
+                for (int i = 0; i < toppings.Length && contains; i++)
                 {
                     if (!toppingsOnPizza.Contains(toppings[i]))
-                        pizzas.Remove(pizza);
+                        contains = false;
                 }
-            }
-            string[][] pizzaItems = new string[pizzas.Count][];
-            for (int i = 0; i < pizzaItems.Length; i++)
-            {
-                pizzaItems[i] = LogicHelper.GetItem("Pizza", pizzas[i]);
+                if(contains)
+                    pizzas.Add(LogicHelper.GetItem("Pizza", pizza));
             }
             using (DataTable dt = new DataTable())
             {
                 dt.Columns.Add("Id");
                 dt.Columns.Add("Name");
                 dt.Columns.Add("Price");
-                GridView1.DataSource = dt;
-                foreach (var pizza in pizzaItems)
+                foreach (var pizza in pizzas)
                 {
                     dt.Rows.Add(pizza[0],pizza[1], pizza[2] + " kr,-");
                     dt.Rows.Add("",string.Join(", ", LogicHelper.GetPizza(pizza[1])));
                 }
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                return dt;
             }
         }
     }
