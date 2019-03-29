@@ -77,7 +77,7 @@ namespace Website.Models
         {
             using (DatabaseHelper database = new DatabaseHelper())
             {
-                return database.Query1D("*", itemTable, "WHERE Name='" + itemName + "'");
+                return database.QueryProcedure1D("GetItem", new []{"TableName","ItemName"},new []{itemTable,itemName});
             }
         }
 

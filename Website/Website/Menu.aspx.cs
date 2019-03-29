@@ -61,21 +61,10 @@ namespace Website
                 foreach (var pizza in pizzaItems)
                 {
                     dt.Rows.Add(pizza[0],pizza[1], pizza[2] + " kr,-");
-                    dt.Rows.Add(string.Join(", ", LogicHelper.GetPizza(pizza[1])));
+                    dt.Rows.Add("",string.Join(", ", LogicHelper.GetPizza(pizza[1])));
                 }
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
-            }
-        }
-        
-        protected void grid_RowCreated(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex % 2 == 1)
-            {
-                e.Row.Cells[0].ColumnSpan = 3;
-                //now make up for the colspan from cell2
-                e.Row.Cells.RemoveAt(2);
-                e.Row.Cells.RemoveAt(1);
             }
         }
     }

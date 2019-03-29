@@ -24,12 +24,12 @@
             <a href="Home.aspx">Forside</a>
             <a href="Menu.aspx">Menu</a>
             <a href="Contact.aspx">Kontakt</a>
-            <input type="text" placeholder="Search for topping" id="searchBar" name="topping" runat="server"/>
+            <input type="text" placeholder="Search for topping, seperate with ','" id="searchBar" name="topping" runat="server"/>
             
             <asp:Button runat="server" Text="Search" OnClick="GetPizzas"/>
         </div>
         <div class="menuItems">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCreated="grid_RowCreated" class="menuGrid">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Nummer"/>
                     <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
