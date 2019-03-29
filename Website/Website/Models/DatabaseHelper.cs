@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -7,11 +8,10 @@ namespace Website.Models
 {
     public class DatabaseHelper : IDisposable
     {
-        private string ConnectionString { get; }
-
-        public DatabaseHelper(string connectionString)
+        private string ConnectionString { get; set; }
+        public DatabaseHelper()
         {
-            ConnectionString = connectionString;
+            ConnectionString = ConfigurationManager.ConnectionStrings["PizzaDB"].ConnectionString;
         }
 
         public int GetRows(string table)
@@ -110,7 +110,8 @@ namespace Website.Models
             using (SqlCommand cmd = new SqlCommand(procedureName, conn) { CommandType = CommandType.StoredProcedure })
             {
                 conn.Open();
-                for (int i = 0; i < parameterNames.Length; i++) cmd.Parameters.AddWithValue(parameterNames[i], parameters[i]);
+                for (int i = 0; i < parameterNames.Length; i++) 
+                    cmd.Parameters.AddWithValue(parameterNames[i], parameters[i]);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     List<string[]> output = new List<string[]>();
@@ -174,6 +175,7 @@ namespace Website.Models
 
         public void Dispose()
         {
+            ConnectionString = null;
         }
     }
 }
