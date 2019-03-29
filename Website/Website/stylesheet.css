@@ -70,7 +70,7 @@
     top: 0;
     left: 0;
     background-color: #111;
-    opacity: 0.5;
+    opacity: 0.8;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -79,7 +79,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: antiquewhite;
     display: block;
 }
 
@@ -108,8 +108,15 @@
 hr.hr1 {
     width: 60%;
     position: absolute;
-    margin: 0 0 0 auto;
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 0.5px solid grey;
+}
+
+.open.hr1 ::before {
+
 }
 
 .price {

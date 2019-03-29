@@ -12,13 +12,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="progress-container">
-            <div class="progress-bar" id="myBar">
-            </div>
+         <div class="progress-bar" id="myBar">
+         </div>
         </div>
         <div class="backImg">
-        </div>
+         </div>
         <div>
-            <img class="logo" src="assets/logoDuomo.png" alt="duomo pizzaria logo"/>
+            <img class="logo" src="assets/logoDuomo.png" />
         </div>
         <div class="sidenav">
             <a href="Home.aspx">Forside</a>
@@ -37,9 +37,9 @@
                 </Columns>
             </asp:GridView>
         </div>
-        <div>
-            <p>Hello There!</p>
-        </div>
+            <div>
+                <p>Hello There!</p>
+            </div>
     </form>
 </body>
 </html>
