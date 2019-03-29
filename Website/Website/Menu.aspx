@@ -29,7 +29,7 @@
             <asp:Button runat="server" Text="Search" OnClick="GetPizzas"/>
         </div>
         <div class="menuItems">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="grid" CellSpacing="2" CellPadding="5" >
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="grid" CellSpacing="2" CellPadding="5" >
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Nummer"/>
                     <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
