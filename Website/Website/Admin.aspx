@@ -29,18 +29,18 @@
         <div class="adminNav">
             <div>
                 <input type="text" placeholder="ID" id="idSearch" name="topping" runat="server" />
-                <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
+                <asp:Button runat="server" Text="Create new item" OnClick="CreateItem"/>
            </div>
             <div>
                 <input type="text" placeholder="Navn" id="nameSearch" name="topping" runat="server" />
-                <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
+                <asp:Button runat="server" Text="Update item" OnClick="UpdateItem"/>
             </div>
             <div>
                 <input type="text" placeholder="Pris" id="priceSearch" name="topping" runat="server" />
-                <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+                <asp:Button runat="server" Text="Read data" OnClick="ReadItem"/>
             </div>
             <div>
-                <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+                <asp:Button runat="server" Text="Delete item" OnClick="DeleteItem"/>
             </div>
             <div>
                 <div class="menuItems">
