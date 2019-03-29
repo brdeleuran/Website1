@@ -28,16 +28,36 @@
         <br /><br /><br />
         <div class="adminNav">
             <div>
-                <asp:Button runat="server" Text="Create new item" OnClick="CreateItem"/>
+                <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
+                <div>
+                    <asp:GridView ID="gridViewCreate" runat="server" AutoGenerateColumns="False">
+
+                    </asp:GridView>
+                </div>
            </div>
             <div>
-                <asp:Button runat="server" Text="Update item" OnClick="UpdateItem"/>
+                <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
+                <div>
+                    <asp:GridView ID="gridViewUpdate" runat="server" AutoGenerateColumns="False">
+
+                    </asp:GridView>
+                </div>
             </div>
             <div>
-            <asp:Button runat="server" Text="Read data" OnClick="ReadItem"/>
+            <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+                <div>
+                    <asp:GridView ID="gridViewRead" runat="server" AutoGenerateColumns="False">
+
+                    </asp:GridView>
+                </div>
             </div>
             <div>
-            <asp:Button runat="server" Text="Delete item" OnClick="DeleteItem"/>
+            <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+                <div>
+                    <asp:GridView ID="gridViewDelete" runat="server" AutoGenerateColumns="False">
+
+                    </asp:GridView>
+                </div>
             </div>
         </div>
     </form>
