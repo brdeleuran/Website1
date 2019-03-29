@@ -25,6 +25,21 @@
             <a href="Menu.aspx">Menu</a>
             <a href="Contact.aspx">Kontakt</a>
         </div>
+        <br /><br /><br />
+        <div class="adminNav">
+            <div>
+                <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
+           </div>
+            <div>
+                <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
+            </div>
+            <div>
+            <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+            </div>
+            <div>
+            <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+            </div>
+        </div>
     </form>
 </body>
 </html>
