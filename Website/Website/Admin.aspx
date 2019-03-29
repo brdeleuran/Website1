@@ -28,7 +28,7 @@
         <br /><br /><br />
         <div class="adminNav">
             <div>
-                <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
+                <asp:Button runat="server" Text="Create new item" OnClick="CreateItem"/>
                 <div>
                     <asp:GridView ID="gridViewCreate" runat="server" AutoGenerateColumns="False">
 
@@ -36,7 +36,7 @@
                 </div>
            </div>
             <div>
-                <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
+                <asp:Button runat="server" Text="Update item" OnClick="UpdateItem"/>
                 <div>
                     <asp:GridView ID="gridViewUpdate" runat="server" AutoGenerateColumns="False">
 
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div>
-            <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+            <asp:Button runat="server" Text="Read data" OnClick="ReadItem"/>
                 <div>
                     <asp:GridView ID="gridViewRead" runat="server" AutoGenerateColumns="False">
 
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div>
-            <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+            <asp:Button runat="server" Text="Delete item" OnClick="DeleteItem"/>
                 <div>
                     <asp:GridView ID="gridViewDelete" runat="server" AutoGenerateColumns="False">
 
