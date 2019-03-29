@@ -54,12 +54,20 @@
 .menuItems {
     background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3));
     display: block;
-    width: 60%;
+    width: 66%;
     position: relative;
-    left: 20%;
+    left: 17%;
     text-align: left;
     color: antiquewhite;
     font-size: 20px;
+}
+
+.menuItems td, th {
+    border: none;
+    border-bottom: solid 2px green;
+    border-top: solid 2px crimson;
+    border-spacing: 2px;
+    position: relative;
 }
 
 .sidenav {
@@ -123,6 +131,11 @@ hr.hr1 {
     text-align: center;
     color: antiquewhite;
     font-size: 20px;
+}
+
+.grid {
+    border: none;
+    width: 100%;
 }
 
 .faqPlus {

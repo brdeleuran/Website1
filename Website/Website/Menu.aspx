@@ -28,11 +28,11 @@
             <button type="submit" class="searchButton">Search</button>
         </div>
         <div class="menuItems">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="grid" CellSpacing="2" CellPadding="5" >
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Nummer"/>
                     <asp:BoundField DataField="Name" HeaderText="Pizza Navn"/>
-                    <asp:BoundField DataField="Price" HeaderText="Pris"/>
+                    <asp:BoundField DataField="Price" HeaderText="Pris" ItemStyle-Font-Bold="true"/>
                 </Columns>
             </asp:GridView>
         </div>
