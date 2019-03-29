@@ -13,5 +13,21 @@ namespace Website
         {
 
         }
+        public void CreateItem(object sender, EventArgs e)
+        {
+
+        }
+        public void UpdateItem(object sender, EventArgs e)
+        {
+
+        }
+        public void ReadItem(object sender, EventArgs e)
+        {
+
+        }
+        public void DeleteItem(object sender, EventArgs e)
+        {
+
+        }
     }
 }

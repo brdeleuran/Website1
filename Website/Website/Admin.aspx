@@ -28,16 +28,16 @@
         <br /><br /><br />
         <div class="adminNav">
             <div>
-                <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
+                <asp:Button runat="server" Text="Create new item" OnClick="CreateItem"/>
            </div>
             <div>
-                <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
+                <asp:Button runat="server" Text="Update item" OnClick="UpdateItem"/>
             </div>
             <div>
-            <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+            <asp:Button runat="server" Text="Read data" OnClick="ReadItem"/>
             </div>
             <div>
-            <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+            <asp:Button runat="server" Text="Delete item" OnClick="DeleteItem"/>
             </div>
         </div>
     </form>
