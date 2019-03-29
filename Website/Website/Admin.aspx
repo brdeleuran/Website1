@@ -28,33 +28,28 @@
         <br /><br /><br />
         <div class="adminNav">
             <div>
+                <input type="text" placeholder="ID" id="idSearch" name="topping" runat="server" />
                 <asp:Button runat="server" Text="Create new item" OnClick="createItem"/>
-                <div>
-                    <asp:GridView ID="gridViewCreate" runat="server" AutoGenerateColumns="False">
-
-                    </asp:GridView>
-                </div>
            </div>
             <div>
+                <input type="text" placeholder="Navn" id="nameSearch" name="topping" runat="server" />
                 <asp:Button runat="server" Text="Update item" OnClick="updateItem"/>
-                <div>
-                    <asp:GridView ID="gridViewUpdate" runat="server" AutoGenerateColumns="False">
+            </div>
+            <div>
+                <input type="text" placeholder="Pris" id="priceSearch" name="topping" runat="server" />
+                <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
+            </div>
+            <div>
+                <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
+            </div>
+            <div>
+                <div class="menuItems">
+                    <asp:GridView ID="gridViewPizza" runat="server" AutoGenerateColumns="False">
 
                     </asp:GridView>
                 </div>
-            </div>
-            <div>
-            <asp:Button runat="server" Text="Read data" OnClick="readItem"/>
-                <div>
-                    <asp:GridView ID="gridViewRead" runat="server" AutoGenerateColumns="False">
-
-                    </asp:GridView>
-                </div>
-            </div>
-            <div>
-            <asp:Button runat="server" Text="Delete item" OnClick="deleteItem"/>
-                <div>
-                    <asp:GridView ID="gridViewDelete" runat="server" AutoGenerateColumns="False">
+                <div class="menuItems">
+                    <asp:GridView ID="gridViewTopping" runat="server" AutoGenerateColumns="False">
 
                     </asp:GridView>
                 </div>

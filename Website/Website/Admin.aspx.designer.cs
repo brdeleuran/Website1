@@ -22,39 +22,48 @@ namespace Website {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// gridViewCreate control.
+        /// idSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridViewCreate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idSearch;
         
         /// <summary>
-        /// gridViewUpdate control.
+        /// nameSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridViewUpdate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nameSearch;
         
         /// <summary>
-        /// gridViewRead control.
+        /// priceSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridViewRead;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText priceSearch;
         
         /// <summary>
-        /// gridViewDelete control.
+        /// gridViewPizza control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridViewDelete;
+        protected global::System.Web.UI.WebControls.GridView gridViewPizza;
+        
+        /// <summary>
+        /// gridViewTopping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridViewTopping;
     }
 }

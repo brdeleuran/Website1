@@ -73,6 +73,8 @@
 .adminNav {
     position: center center;
     text-align: center;
+    color: antiquewhite;
+    font-size: 20px;
 }
 
 .sidenav {
